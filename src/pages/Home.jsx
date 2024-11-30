@@ -3,11 +3,11 @@ import images from '../assets/images'; // Single import for all images
 
 const Home = () => {
   return (
-    <section className="p-6 flex">
+    <section className="p-6 flex flex-col lg:flex-row">
       {/* Left Section */}
-      <div className="flex-1">
+      <div className="flex-1 mb-6 lg:mb-0">
         {/* Header Section */}
-        <h1 className="text-5xl font-bold leading-none -mt-10"> {/* Added negative margin-top here */}
+        <h1 className="text-5xl font-bold leading-none -mt-10">
           Simplify Travel with <span className="text-blue-500">TourEase</span>
         </h1>
         <p className="mt-2">
@@ -16,16 +16,14 @@ const Home = () => {
           every journey stress-free.
         </p>
 
-        
         {/* Image Section */}
-<div className="mt-0">
-  <img
-    src={images.logo123} // Access the logo image
-    alt="TourEase Logo"
-    className="w-full h-auto max-w-lg mx-20" // Increased size from max-w-sm to max-w-lg
-  />
-</div>
-
+        <div className="mt-0">
+          <img
+            src={images.logo123} // Access the logo image
+            alt="TourEase Logo"
+            className="w-full h-auto max-w-lg mx-20"
+          />
+        </div>
 
         {/* Search Section */}
         <div className="mt-0 flex justify-center items-center">
@@ -41,7 +39,7 @@ const Home = () => {
       </div>
 
       {/* Right Section - Tourist Attractions */}
-      <div className="w-2/5 ml-6 -mt-12"> {/* Set width to 1/3 or another desired width */}
+      <div className="w-full lg:w-2/5 ml-6 -mt-12">
         <h4 className="text-xl font-bold">Cities Tourist Attractions</h4>
         <div
           className="flex flex-col gap-5 overflow-y-scroll h-[29rem] mt-4 p-4 border border-gray-300 rounded-lg"
@@ -94,7 +92,7 @@ const Home = () => {
               <p className="text-sm text-gray-500">Manila City</p>
             </div>
           </div>  
-          
+
           {/* Manila Ocean Park Card */}
           <div className="flex items-center gap-4 bg-gray-100 p-4 rounded-md">
             <img
